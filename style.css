@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+}
+
+.container {
+  background-color: rgb(189, 174, 174);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.board-box {
+  width: 550px;
+  height: 550px;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(26, 27, 29);
+  color: white;
+}
+
+.board-columns {
+  width: 550px;
+  height: 20px;
+  display: grid;
+  grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr;
+}
+
+.board-column-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-rows {
+  height: 530px;
+  width: 20px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.board-column-elem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  background-color: gray;
+  padding: 5px;
+  width: 530px;
+  height: 530px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.matrix {
+  background-color: gray;
+  /* padding: 5px; */
+  width: 530px;
+  height: 530px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  /* gap: 5px; */
+}
+
+.elem {
+  background-color: rgb(34, 40, 51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.matrixElem {
+  background-color: rgb(34, 40, 51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  height: 50px;
+  /* width: 530px; */
+  justify-content: center;
+  gap: 5px;
+}
+
+button {
+  background-color: rgb(34, 40, 51);
+  color: white;
+  border-radius: 10px;
+  border: 1px;
+  height: 100%;
+  padding: 10px;
+  font-size: 16px;
+  transition: 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: rgb(47, 57, 75);
+}
+
+button:active {
+  background-color: rgb(69, 87, 122);
+}
+
+.defaultBtn {
+  background-color: rgb(175, 41, 41);
+  width: 150px;
+}
+
+.defaultBtn:hover {
+  background-color: rgb(212, 61, 61);
+}
+
+.defaultBtn:active {
+  background-color: rgb(231, 84, 84);
+}
+
+.popUp,
+.historyPopUp {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.range-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 175px;
+}
+
+.history {
+  background-color: white;
+  border-radius: 10px;
+  width: 430px;
+  height: 530px;
+  padding: 10px;
+  gap: 10px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 800px) {
+  .board-box {
+    width: 310px;
+    height: 310px;
+  }
+  .board-columns {
+    width: 310px;
+    height: 10px;
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr;
+    font-size: 10px;
+  }
+
+  .board {
+    width: 300px;
+    height: 300px;
+  }
+
+  .board-rows {
+    height: 300px;
+    width: 10px;
+    font-size: 10px;
+  }
+  button {
+    display: flex;
+    /* height: 10px; */
+    font-size: 12px;
+    /* width: 530px; */
+    justify-content: center;
+    gap: 5px;
+  }
+  .buttons {
+    width: 300px;
+    flex-wrap: wrap;
+  }
+
+  .bot-btn {
+    margin-top: 50px;
+  }
+
+  .matrix {
+    width: 300px;
+    height: 300px;
+  }
+
+  .matrixElem {
+    font-size: 10px;
+  }
+  .history {
+    width: 300px;
+    height: 400px;
+  }
+}
+/* 
+.start {
+
+} */

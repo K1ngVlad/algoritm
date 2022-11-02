@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Итерационный алгоритм размещения</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="board-box">
+        <div class="board-columns">
+          <div class="board-column-header">S</div>
+          <div class="board-column-elem">|1|</div>
+          <div class="board-column-elem">|2|</div>
+          <div class="board-column-elem">|3|</div>
+          <div class="board-column-elem">|4|</div>
+          <div class="board-column-elem">|5|</div>
+        </div>
+        <div class="board-rows">
+          <div class="board-column-elem">|1|</div>
+          <div class="board-column-elem">|2|</div>
+          <div class="board-column-elem">|3|</div>
+          <div class="board-column-elem">|4|</div>
+          <div class="board-column-elem">|5|</div>
+        </div>
+        <div class="board"></div>
+      </div>
+
+      <div class="buttons">
+        <button class="start">Начать</button>
+        <button class="seeMatrix">Посмотреть матрицу связей</button>
+        <div class="range-block">
+          <div class="numberOfCycles">Количество циклов: 3</div>
+          <input
+            class="inputRange"
+            checked="cycles"
+            type="range"
+            min="1"
+            max="10"
+            value="3"
+          />
+        </div>
+        <button class="historyBtn">История</button>
+      </div>
+      <div class="buttons bot-btn">
+        <button class="defaultBtn">Сброс</button>
+      </div>
+      <div class="popUp">
+        <div class="matrix"></div>
+        <div class="buttons">
+          <button class="changeBtn">Изменить матрицу связей</button>
+          <button class="closeBtn">Закрыть</button>
+        </div>
+      </div>
+      <div class="historyPopUp">
+        <div class="history"></div>
+        <div class="buttons">
+          <button class="clearHistory">Очистить</button>
+          <button class="closeBtn">Закрыть</button>
+        </div>
+      </div>
+    </div>
+    <script src="globalParams.js"></script>
+    <script src="DOMElems.js"></script>
+    <script src="functions.js"></script>
+    <script src="algoritm.js"></script>
+    <script src="start.js"></script>
+    <script src="events.js"></script>
+  </body>
+</html>

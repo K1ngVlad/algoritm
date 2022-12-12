@@ -4,3 +4,4 @@ createRelationshipMatrix();
 
 createElems();
 createMatrixElems();
+funcNumGo();

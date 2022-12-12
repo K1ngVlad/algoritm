@@ -5,19 +5,16 @@ const getAlgoritm = () => {
       let maxF = 0;
       let f = null;
       let g = null;
-      for (let j = 0; j < widthBoard * heightBoard; j++) {
-        if (i === j) continue;
+      for (let j = 0; j < i; j++) {
+        // if (i === j) continue;
         let F =
           relationshipMatrix.reduce((sum, p) => {
-            return (
-              sum +
-              p[board[Math.floor(i / widthBoard)][i % widthBoard] - 1] -
-              p[board[Math.floor(j / widthBoard)][j % widthBoard] - 1]
-            );
+            return sum + p[i] - p[j];
           }, 0) *
           lengthMatrix.reduce((sum, h) => {
             return sum + h[i] - h[j];
           }, 0);
+        console.log(F);
         if (F > maxF) {
           maxF = F;
           f = i;
@@ -58,4 +55,9 @@ const getAlgoritm = () => {
       }
     }
   }
+  funcNumGo();
+  console.log(sum);
+  // console.log(lengthMatrix);
+  // console.log(relationshipMatrix);
+  console.log(JSON.stringify(board));
 };

@@ -12,3 +12,4 @@ const historyBtn = document.querySelector('.historyBtn');
 const historyField = document.querySelector('.history');
 const clearBtn = document.querySelector('.clearHistory');
 const defaultBtn = document.querySelector('.defaultBtn');
+const funcNum = document.querySelector('.funcNum');

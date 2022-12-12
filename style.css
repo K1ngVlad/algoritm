@@ -19,11 +19,12 @@ body,
 }
 
 .board-box {
-  width: 550px;
-  height: 550px;
+  width: 560px;
+  height: 530px;
   margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   background-color: rgb(26, 27, 29);
   color: white;
 }
@@ -218,7 +219,7 @@ button:active {
   }
 
   .matrixElem {
-    font-size: 10px;
+    font-size: 8px;
   }
   .history {
     width: 300px;

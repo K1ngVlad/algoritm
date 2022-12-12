@@ -83,17 +83,38 @@ const createLengthMatrix = () => {
   }
 };
 
+// const createRelationshipMatrix = () => {
+//   for (let y_i = 0; y_i < heightBoard; y_i++) {
+//     for (let x_i = 0; x_i < widthBoard; x_i++) {
+//       const row = [];
+//       for (let y_j = 0; y_j < heightBoard; y_j++) {
+//         for (let x_j = 0; x_j < widthBoard; x_j++) {
+//           row[x_j + y_j * widthBoard] =
+//             x_j + y_j * widthBoard === x_i + y_i * widthBoard ? 0 : ranNum(10);
+//         }
+//       }
+//       relationshipMatrix[x_i + y_i * widthBoard] = row;
+//     }
+//   }
+// };
+
+const funcNumGo = () => {
+  sum = 0;
+  for (i = 0; i < widthBoard * heightBoard; i++) {
+    for (j = 0; j < widthBoard * heightBoard; j++) {
+      sum += relationshipMatrix[i][j] * lengthMatrix[i][j];
+    }
+  }
+  funcNum.textContent = `F = ${sum}`;
+};
+
 const createRelationshipMatrix = () => {
-  for (let y_i = 0; y_i < heightBoard; y_i++) {
-    for (let x_i = 0; x_i < widthBoard; x_i++) {
-      const row = [];
-      for (let y_j = 0; y_j < heightBoard; y_j++) {
-        for (let x_j = 0; x_j < widthBoard; x_j++) {
-          row[x_j + y_j * widthBoard] =
-            x_j + y_j * widthBoard === x_i + y_i * widthBoard ? 0 : ranNum(10);
-        }
-      }
-      relationshipMatrix[x_i + y_i * widthBoard] = row;
+  for (let i = 0; i < heightBoard * widthBoard; i++) {
+    for (let j = 0; j < i; j++) {
+      const num = ranNum(10);
+      // console.log(`${i} ${j}`);
+      relationshipMatrix[i][j] = num;
+      relationshipMatrix[j][i] = num;
     }
   }
 };

@@ -1,5 +1,5 @@
 const getAlgoritm = () => {
-  for (let v = 0; v < h; v++) {
+  do {
     algoritmHistory.push('Начало цикла');
     for (let i = 0; i < widthBoard * heightBoard; i++) {
       let maxF = 0;
@@ -14,7 +14,7 @@ const getAlgoritm = () => {
           lengthMatrix.reduce((sum, h) => {
             return sum + h[i] - h[j];
           }, 0);
-        console.log(F);
+        // console.log(F);
         if (F > maxF) {
           maxF = F;
           f = i;
@@ -54,8 +54,11 @@ const getAlgoritm = () => {
         );
       }
     }
-  }
-  funcNumGo();
+    prevSum = sum;
+    funcNumGo();
+    console.log((prevSum - sum) / prevSum);
+  } while ((prevSum - sum) / prevSum > e);
+
   console.log(sum);
   // console.log(lengthMatrix);
   // console.log(relationshipMatrix);

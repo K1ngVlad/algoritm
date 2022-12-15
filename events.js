@@ -21,9 +21,9 @@ changeBtn.addEventListener('click', () => {
   changeMatrixElems();
 });
 
-inputRange.addEventListener('input', (e) => {
-  changeRange(e.target.value);
-});
+// inputRange.addEventListener('input', (e) => {
+//   changeRange(e.target.value);
+// });
 
 historyBtn.addEventListener('click', () => {
   historyPopUp.style.display = 'flex';

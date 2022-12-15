@@ -110,13 +110,20 @@ const funcNumGo = () => {
 
 const createRelationshipMatrix = () => {
   for (let i = 0; i < heightBoard * widthBoard; i++) {
-    for (let j = 0; j < i; j++) {
+    if (relationshipMatrix[i] === undefined) relationshipMatrix[i] = [];
+    for (let j = 0; j <= i; j++) {
+      if (j === i) {
+        relationshipMatrix[i][j] = 0;
+        continue;
+      }
       const num = ranNum(10);
       // console.log(`${i} ${j}`);
       relationshipMatrix[i][j] = num;
+      if (relationshipMatrix[j] === undefined) relationshipMatrix[i] = [];
       relationshipMatrix[j][i] = num;
     }
   }
+  console.log(relationshipMatrix);
 };
 
 const changeRange = (range) => {

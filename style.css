@@ -176,7 +176,7 @@ button:active {
 @media (max-width: 800px) {
   .board-box {
     width: 310px;
-    height: 310px;
+    height: 300px;
   }
   .board-columns {
     width: 310px;
